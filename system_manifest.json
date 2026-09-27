@@ -1,0 +1,25 @@
+{
+  "system": "HYDRORESQ Urban Flood Nowcasting",
+  "lead_time_minutes": 180,
+  "time_step_minutes": 5,
+  "forecast_frames": 36,
+  "node_count": 50,
+  "drainage_edges": 49,
+  "radar_source": "SYNTHETIC_DWR_DEMO",
+  "outputs": {
+    "radar_nowcast": "module2\\data\\output\\radar_nowcast_0_180min.npz",
+    "flood_forecast": "module3_simulation\\data\\output\\flood_results.csv",
+    "terrain_graph": "module3_simulation\\data\\input\\terrain_graph.gpickle"
+  },
+  "requirements_coverage": {
+    "dwr_rainfall_nowcast": true,
+    "high_resolution_dem": true,
+    "2d_surface_routing": true,
+    "directed_drainage_graph": true,
+    "hydraulic_capacity_and_blockage": true,
+    "street_level_depth_cm": true,
+    "0_3_hour_forecast": true,
+    "gis_dashboard": true,
+    "safe_route_api": true
+  }
+}

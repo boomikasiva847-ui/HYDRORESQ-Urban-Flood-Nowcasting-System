@@ -1,0 +1,19 @@
+{
+    "threshold_cm": 15.0,
+    "total_blocked_nodes": 13,
+    "blocked_nodes": [
+        "MH_VL_004",
+        "MH_VL_005",
+        "MH_VL_006",
+        "MH_VL_008",
+        "MH_VL_012",
+        "MH_VL_020",
+        "MH_VL_022",
+        "MH_VL_023",
+        "MH_VL_026",
+        "MH_VL_032",
+        "MH_VL_037",
+        "MH_VL_042",
+        "MH_VL_045"
+    ]
+}

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HYDRORESQ Flood Command Dashboard</title>
+    
+
+    <!-- Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <!-- Dashboard CSS -->
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    />
+    
+
+</head>
+
+
+<body>
+
+<div id="app-container">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside id="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🌊
+            </div>
+
+            <div>
+                <h2>HYDRORESQ</h2>
+                <span>Flood Intelligence</span>
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <p class="section-title">
+                MONITORING
+            </p>
+
+            <button class="nav-item active" data-view="dashboard">
+                <span>⌂</span>
+                Dashboard
+            </button>
+
+            <button class="nav-item" data-view="map">
+                <span>🗺</span>
+                Flood Map
+            </button>
+
+            <button class="nav-item" data-view="warnings">
+                <span>⚠</span>
+                Flood Warnings
+            </button>
+
+            <button class="nav-item" data-view="forecast">
+                <span>◷</span>
+                Forecast
+            </button>
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <p class="section-title">
+                SYSTEM
+            </p>
+
+            <button class="nav-item" data-view="settings">
+                <span>⚙</span>
+                Settings
+            </button>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>System Online</strong>
+                    <small>Modules 1 → 6</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN DASHBOARD
+    ====================================================== -->
+
+    <main id="main-content">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header id="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Urban Flood Command Dashboard
+                </h1>
+
+                <p>
+                    GIS-based real-time flood monitoring and
+                    forecast visualization
+                </p>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <div id="status-indicator">
+
+                    <span
+                        id="ws-dot"
+                        class="dot disconnected">
+                    </span>
+
+                    <span id="ws-status-text">
+                        Disconnected
+                    </span>
+
+                </div>
+
+
+                <div class="live-badge">
+                    ● LIVE
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             SUMMARY CARDS
+        ================================================== -->
+
+        <section class="summary-grid">
+
+
+            <div class="summary-card">
+
+                <div class="card-icon blue">
+                    ◉
+                </div>
+
+                <div>
+
+                    <span class="card-label">
+                        MONITORED NODES
+                    </span>
+
+                    <strong id="total-nodes">
+                        --
+                    </strong>
+
+                    <small>
+                        Flood monitoring points
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon red">
+                    ⚠
+                </div>
+
+                <div>
+
+                    <span class="card-label">
+                        FLOODED NODES
+                    </span>
+
+                    <strong id="flooded-nodes">
+                        --
+                    </strong>
+
+                    <small>
+                        Current forecast
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon orange">
+                    ◈
+                </div>
+
+                <div>
+
+                    <span class="card-label">
+                        BLOCKED LOCATIONS
+                    </span>
+
+                    <strong id="blocked-nodes">
+                        --
+                    </strong>
+
+                    <small>
+                        Potentially impassable
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon purple">
+                    ≋
+                </div>
+
+                <div>
+
+                    <span class="card-label">
+                        MAX FLOOD DEPTH
+                    </span>
+
+                    <strong id="max-depth">
+                        --
+                    </strong>
+
+                    <small>
+                        Forecast depth
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MAIN GIS SECTION
+        ================================================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- =============================================
+                 GIS MAP
+            ============================================== -->
+
+           <div id="flood-map-section" class="panel map-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Live GIS Flood Map
+                        </h2>
+
+                        <p>
+                            Flood risk visualization from
+                            Module 4 forecast
+                        </p>
+
+                    </div>
+
+
+                    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">
+                        <span id="road-source-badge" class="map-live">ROAD DATA: CHECKING...</span>
+                        <span class="map-live">● LIVE MAP</span>
+                    </div>
+
+                </div>
+
+
+                <div class="map-shell">
+                    <div id="map"></div>
+                    <div id="map-hud" class="map-hud">
+                        <div class="hud-title">CHENNAI TEST AREA</div>
+                        <div class="hud-row">
+                            <span id="hud-forecast">Forecast +5 min</span>
+                            <span id="hud-affected">Affected roads: --</span>
+                        </div>
+                        <div id="hud-caption" class="hud-caption">Affected roads are highlighted. Click a segment for depth and status.</div>
+                    </div>
+                </div>
+
+                <!-- Map Legend -->
+
+                <div
+                    id="legend-panel"
+                    class="map-legend"
+                >
+
+                    <h4>
+                        Flood Risk
+                    </h4>
+
+                    <div class="legend-item">
+
+                        <span class="color-box green"></span>
+
+                        <span>
+                            &lt; 5 cm — Safe
+                        </span>
+
+                    </div>
+
+
+                    <div class="legend-item">
+
+                        <span class="color-box yellow"></span>
+
+                        <span>
+                            5–15 cm — Caution
+                        </span>
+
+                    </div>
+
+
+                    <div class="legend-item">
+
+                        <span class="color-box red"></span>
+
+                        <span>
+                            &gt; 15 cm — Severe Flood
+                        </span>
+
+                    </div>
+
+
+                    <div class="legend-item">
+
+                        <span class="line-box dashed-red"></span>
+
+                        <span>
+                            Impassable Road
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 FORECAST PANEL
+            ============================================== -->
+
+            <div class="right-column">
+
+
+                <div id="forecast-section" class="panel forecast-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Flood Forecast
+                            </h2>
+
+                            <p>
+                                Upcoming forecast cycles
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="forecast-times">
+
+
+                        <div class="forecast-time active">
+
+                            <span>
+                                STEP 01
+                            </span>
+
+                            <strong>
+                                +60 min
+                            </strong>
+
+                            <small>
+                                Next forecast
+                            </small>
+
+                        </div>
+
+
+                        <div class="forecast-time">
+
+                            <span>
+                                STEP 02
+                            </span>
+
+                            <strong>
+                                +120 min
+                            </strong>
+
+                            <small>
+                                Future forecast
+                            </small>
+
+                        </div>
+
+
+                        <div class="forecast-time">
+
+                            <span>
+                                STEP 03
+                            </span>
+
+                            <strong>
+                                +180 min
+                            </strong>
+
+                            <small>
+                                Future forecast
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Timeline -->
+
+                    <div
+                        id="time-slider-panel"
+                        class="timeline-panel"
+                    >
+
+                        <div class="slider-header">
+
+                            <label for="time-slider">
+
+                                <strong>
+                                    Forecast Timeline
+                                </strong>
+
+                            </label>
+
+                            <span id="slider-time-label">
+                                Step 0 (+60 mins)
+                            </span>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            id="time-slider"
+                            min="0"
+                            max="2"
+                            value="0"
+                            step="1"
+                        />
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     ALERT PANEL
+                ========================================== -->
+
+                <div id="warnings-section" class="panel alert-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Flood Alerts
+                            </h2>
+
+                            <p>
+                                Current monitored conditions
+                            </p>
+
+                        </div>
+
+                        <span class="alert-count">
+                            LIVE
+                        </span>
+
+                    </div>
+
+
+                    <div class="alert-list">
+
+                        <div class="alert-item">
+
+                            <div class="alert-symbol red">
+                                !
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Severe flood locations
+                                </strong>
+
+                                <p>
+                                    Locations exceeding
+                                    15 cm depth
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert-item">
+
+                            <div class="alert-symbol orange">
+                                !
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Road blockage monitoring
+                                </strong>
+
+                                <p>
+                                    Potentially impassable
+                                    road segments
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert-item">
+
+                            <div class="alert-symbol blue">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    GIS monitoring active
+                                </strong>
+
+                                <p>
+                                    Module 4 forecast connected
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="road-risk-panel">
+                        <div class="road-risk-header">
+                            <div>
+                                <strong>Critical road segments</strong>
+                                <span>Highest forecast depths at the selected time</span>
+                            </div>
+                            <span id="road-risk-count">--</span>
+                        </div>
+                        <div id="road-risk-list" class="road-risk-list">
+                            <div class="empty-road-risk">Waiting for forecast…</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     MODULE 6 SAFE ROUTING
+                ========================================== -->
+
+                <div id="routing-section" class="panel" style="margin-top:16px;">
+                    <div class="panel-header">
+                        <div>
+                            <h2>Dynamic Safe Routing</h2>
+                            <p>Uses the selected forecast time and current routing network</p>
+                        </div>
+                        <span id="route-status" class="map-live">Checking...</span>
+                    </div>
+
+                    <div style="display:grid;gap:10px;">
+                        <label>Origin
+                            <select id="route-origin" style="width:100%;padding:9px;"></select>
+                        </label>
+                        <label>Destination
+                            <select id="route-destination" style="width:100%;padding:9px;"></select>
+                        </label>
+                        <label>User type
+                            <select id="route-user-type" style="width:100%;padding:9px;">
+                                <option value="commuter">Commuter — 15 cm</option>
+                                <option value="transit">Transit — 10 cm</option>
+                                <option value="emergency">Emergency — 30 cm</option>
+                            </select>
+                        </label>
+                        <div style="display:flex;gap:8px;">
+                            <button id="calculate-route" type="button">Calculate Safe Route</button>
+                            <button id="clear-route" type="button">Clear</button>
+                        </div>
+                        <div id="route-result" style="padding:10px;background:#f4f7fa;border-radius:6px;">Select origin and destination.</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DATA FLOW
+        ================================================== -->
+
+        <section class="pipeline-panel">
+
+            <div class="pipeline-title">
+
+                <h2>
+                    Flood Prediction Pipeline
+                </h2>
+
+                <p>
+                    Current integrated system
+                </p>
+
+            </div>
+
+
+            <div class="pipeline">
+
+                <div class="pipeline-node">
+                    <span>01</span>
+                    <strong>Terrain</strong>
+                    <small>Module 1</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-node">
+                    <span>02</span>
+                    <strong>Inflows</strong>
+                    <small>Module 2</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-node">
+                    <span>03</span>
+                    <strong>Simulation</strong>
+                    <small>Module 3</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-node">
+                    <span>04</span>
+                    <strong>Forecast API</strong>
+                    <small>Module 4</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-node current">
+                    <span>05</span>
+                    <strong>GIS Dashboard</strong>
+                    <small>Module 5</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-node">
+                    <span>06</span>
+                    <strong>Safe Routing</strong>
+                    <small>Module 6</small>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =================================================
+     SETTINGS
+================================================== -->
+
+<section id="settings-section" class="settings-section">
+
+    <div class="settings-panel">
+
+        <div class="panel-header">
+
+            <div>
+                <h2>HYDRORESQ Settings</h2>
+
+                <p>
+                    Dashboard and forecast configuration
+                </p>
+            </div>
+
+            <span class="map-live">
+                ● SYSTEM
+            </span>
+
+        </div>
+
+
+        <div class="settings-grid">
+
+            <div class="setting-card">
+
+                <h3>Module 4 Forecast API</h3>
+
+                <p>
+                    http://127.0.0.1:8000/forecast
+                </p>
+
+                <span class="setting-status online">
+                    ● Connected
+                </span>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <h3>WebSocket Feed</h3>
+
+                <p>
+                    Real-time forecast communication
+                </p>
+
+                <span
+                    id="settings-ws-status"
+                    class="setting-status"
+                >
+                    Checking...
+                </span>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <h3>Forecast Horizon</h3>
+
+                <select id="settings-horizon">
+
+                    <option value="60">
+                        +60 minutes
+                    </option>
+
+                    <option value="120">
+                        +120 minutes
+                    </option>
+
+                    <option value="180">
+                        +180 minutes
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <h3>Auto Refresh</h3>
+
+                <select id="settings-refresh">
+
+                    <option value="enabled">
+                        Enabled
+                    </option>
+
+                    <option value="disabled">
+                        Disabled
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     LEAFLET
+========================================================= -->
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+
+<!-- =========================================================
+     EXISTING MODULE 5 JAVASCRIPT
+========================================================= -->
+
+<script src="/static/js/map_init.js"></script>
+
+<script src="/static/js/forecast_core.js?v=4"></script>
+<script src="/static/js/forcast_fetch.js?v=4"></script>
+
+<script src="/static/js/road_status.js?v=7"></script>
+<script src="/static/js/map_presentation.js?v=3"></script>
+
+<script src="/static/js/slider_control.js?v=4"></script>
+
+<script src="/static/js/wedsocket_client.js?v=5"></script>
+
+<script src="/static/js/navigation.js"></script>
+<script src="/static/js/safe_route.js?v=5"></script>
+
+
+
+</body>
+
+</html>

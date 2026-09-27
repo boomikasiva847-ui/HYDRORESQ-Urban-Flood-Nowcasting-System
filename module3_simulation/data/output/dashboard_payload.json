@@ -1,0 +1,855 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2106,
+                    12.981
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_001",
+                "flood_depth_cm": 0.01,
+                "status": "SAFE",
+                "Q_in_m3s": 2e-06,
+                "Q_capacity_m3s": 0.427
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2269,
+                    12.9834
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_002",
+                "flood_depth_cm": 5.02,
+                "status": "CAUTION",
+                "Q_in_m3s": 5.2e-05,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2123,
+                    12.9658
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_003",
+                "flood_depth_cm": 0.02,
+                "status": "SAFE",
+                "Q_in_m3s": 1e-06,
+                "Q_capacity_m3s": 1.0287
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2279,
+                    12.979
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_004",
+                "flood_depth_cm": 72.12,
+                "status": "FLOODED",
+                "Q_in_m3s": 0.001862,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.217,
+                    12.9762
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_005",
+                "flood_depth_cm": 67.35,
+                "status": "FLOODED",
+                "Q_in_m3s": 0.001367,
+                "Q_capacity_m3s": 0.4434
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2139,
+                    12.9735
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_006",
+                "flood_depth_cm": 25.79,
+                "status": "FLOODED",
+                "Q_in_m3s": 6.9e-05,
+                "Q_capacity_m3s": 0.4845
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2312,
+                    12.9674
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_007",
+                "flood_depth_cm": 0.49,
+                "status": "SAFE",
+                "Q_in_m3s": 1.3e-05,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2234,
+                    12.9832
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_008",
+                "flood_depth_cm": 29.0,
+                "status": "FLOODED",
+                "Q_in_m3s": 0.000495,
+                "Q_capacity_m3s": 0.1472
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2255,
+                    12.9857
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_009",
+                "flood_depth_cm": 0.77,
+                "status": "SAFE",
+                "Q_in_m3s": 7e-06,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2265,
+                    12.9667
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_010",
+                "flood_depth_cm": 0.48,
+                "status": "SAFE",
+                "Q_in_m3s": 0.000173,
+                "Q_capacity_m3s": 0.4161
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2195,
+                    12.9867
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_011",
+                "flood_depth_cm": 0.14,
+                "status": "SAFE",
+                "Q_in_m3s": 2e-06,
+                "Q_capacity_m3s": 0.2991
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2268,
+                    12.9739
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_012",
+                "flood_depth_cm": 27.31,
+                "status": "FLOODED",
+                "Q_in_m3s": 0.011203,
+                "Q_capacity_m3s": 0.186
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2143,
+                    12.9802
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_013",
+                "flood_depth_cm": 14.5,
+                "status": "CAUTION",
+                "Q_in_m3s": 1.4e-05,
+                "Q_capacity_m3s": 0.4145
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2347,
+                    12.9745
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_014",
+                "flood_depth_cm": 5.39,
+                "status": "CAUTION",
+                "Q_in_m3s": 0.000187,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2311,
+                    12.9821
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_015",
+                "flood_depth_cm": 7.71,
+                "status": "CAUTION",
+                "Q_in_m3s": 0.001097,
+                "Q_capacity_m3s": 0.1284
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.22,
+                    12.9851
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_016",
+                "flood_depth_cm": 5.27,
+                "status": "CAUTION",
+                "Q_in_m3s": 7e-06,
+                "Q_capacity_m3s": 0.5398
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2279,
+                    12.9792
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_017",
+                "flood_depth_cm": 4.08,
+                "status": "SAFE",
+                "Q_in_m3s": 0.003667,
+                "Q_capacity_m3s": 0.5421
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2261,
+                    12.9871
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_018",
+                "flood_depth_cm": 0.0,
+                "status": "SAFE",
+                "Q_in_m3s": 1e-06,
+                "Q_capacity_m3s": 0.4969
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2235,
+                    12.9836
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_019",
+                "flood_depth_cm": 7.75,
+                "status": "CAUTION",
+                "Q_in_m3s": 0.000112,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.219,
+                    12.9796
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_020",
+                "flood_depth_cm": 62.83,
+                "status": "FLOODED",
+                "Q_in_m3s": 0.003128,
+                "Q_capacity_m3s": 1.4753
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2315,
+                    12.9839
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_021",
+                "flood_depth_cm": 5.94,
+                "status": "CAUTION",
+                "Q_in_m3s": 0.000562,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2249,
+                    12.982
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_022",
+                "flood_depth_cm": 19.81,
+                "status": "FLOODED",
+                "Q_in_m3s": 0.001816,
+                "Q_capacity_m3s": 0.8511
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2163,
+                    12.9767
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_023",
+                "flood_depth_cm": 63.98,
+                "status": "FLOODED",
+                "Q_in_m3s": 0.000625,
+                "Q_capacity_m3s": 1.0722
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2321,
+                    12.9679
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_024",
+                "flood_depth_cm": 0.46,
+                "status": "SAFE",
+                "Q_in_m3s": 1.1e-05,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.214,
+                    12.9723
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_025",
+                "flood_depth_cm": 0.31,
+                "status": "SAFE",
+                "Q_in_m3s": 0.000111,
+                "Q_capacity_m3s": 1.9701
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2225,
+                    12.9716
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_026",
+                "flood_depth_cm": 79.66,
+                "status": "FLOODED",
+                "Q_in_m3s": 0.028465,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2175,
+                    12.9868
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_027",
+                "flood_depth_cm": 0.02,
+                "status": "SAFE",
+                "Q_in_m3s": 0.0,
+                "Q_capacity_m3s": 0.6562
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2291,
+                    12.9688
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_028",
+                "flood_depth_cm": 0.97,
+                "status": "SAFE",
+                "Q_in_m3s": 0.000339,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2222,
+                    12.98
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_029",
+                "flood_depth_cm": 2.35,
+                "status": "SAFE",
+                "Q_in_m3s": 0.003068,
+                "Q_capacity_m3s": 0.4247
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2177,
+                    12.9858
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_030",
+                "flood_depth_cm": 0.03,
+                "status": "SAFE",
+                "Q_in_m3s": 1e-06,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2121,
+                    12.9887
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_031",
+                "flood_depth_cm": 0.0,
+                "status": "SAFE",
+                "Q_in_m3s": 0.0,
+                "Q_capacity_m3s": 1.1871
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2131,
+                    12.9783
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_032",
+                "flood_depth_cm": 16.58,
+                "status": "FLOODED",
+                "Q_in_m3s": 1.5e-05,
+                "Q_capacity_m3s": 1.1386
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2232,
+                    12.9691
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_033",
+                "flood_depth_cm": 11.74,
+                "status": "CAUTION",
+                "Q_in_m3s": 0.003798,
+                "Q_capacity_m3s": 0.7546
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2289,
+                    12.9882
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_034",
+                "flood_depth_cm": 8.17,
+                "status": "CAUTION",
+                "Q_in_m3s": 0.0,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2268,
+                    12.975
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_035",
+                "flood_depth_cm": 5.93,
+                "status": "CAUTION",
+                "Q_in_m3s": 0.011559,
+                "Q_capacity_m3s": 0.5575
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2162,
+                    12.9763
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_036",
+                "flood_depth_cm": 10.77,
+                "status": "CAUTION",
+                "Q_in_m3s": 0.000848,
+                "Q_capacity_m3s": 3.8254
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2247,
+                    12.9788
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_037",
+                "flood_depth_cm": 65.11,
+                "status": "FLOODED",
+                "Q_in_m3s": 0.004035,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2117,
+                    12.9665
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_038",
+                "flood_depth_cm": 0.0,
+                "status": "SAFE",
+                "Q_in_m3s": 1e-06,
+                "Q_capacity_m3s": 5.9913
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2267,
+                    12.971
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_039",
+                "flood_depth_cm": 0.32,
+                "status": "SAFE",
+                "Q_in_m3s": 0.010167,
+                "Q_capacity_m3s": 0.862
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2243,
+                    12.9884
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_040",
+                "flood_depth_cm": 1.06,
+                "status": "SAFE",
+                "Q_in_m3s": 0.0,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2148,
+                    12.9852
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_041",
+                "flood_depth_cm": 0.54,
+                "status": "SAFE",
+                "Q_in_m3s": 0.0,
+                "Q_capacity_m3s": 1.2129
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2217,
+                    12.9756
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_042",
+                "flood_depth_cm": 96.77,
+                "status": "FLOODED",
+                "Q_in_m3s": 0.01046,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2125,
+                    12.9896
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_043",
+                "flood_depth_cm": 0.0,
+                "status": "SAFE",
+                "Q_in_m3s": 0.0,
+                "Q_capacity_m3s": 4.4582
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2148,
+                    12.9677
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_044",
+                "flood_depth_cm": 0.17,
+                "status": "SAFE",
+                "Q_in_m3s": 1.5e-05,
+                "Q_capacity_m3s": 2.9329
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2216,
+                    12.9696
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_045",
+                "flood_depth_cm": 72.87,
+                "status": "FLOODED",
+                "Q_in_m3s": 0.004807,
+                "Q_capacity_m3s": 3.2312
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2124,
+                    12.9864
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_046",
+                "flood_depth_cm": 0.02,
+                "status": "SAFE",
+                "Q_in_m3s": 0.0,
+                "Q_capacity_m3s": 3.2114
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2332,
+                    12.9892
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_047",
+                "flood_depth_cm": 1.83,
+                "status": "SAFE",
+                "Q_in_m3s": 0.0,
+                "Q_capacity_m3s": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2316,
+                    12.977
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_048",
+                "flood_depth_cm": 0.56,
+                "status": "SAFE",
+                "Q_in_m3s": 0.001948,
+                "Q_capacity_m3s": 1.2624
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2166,
+                    12.9896
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_049",
+                "flood_depth_cm": 0.0,
+                "status": "SAFE",
+                "Q_in_m3s": 0.0,
+                "Q_capacity_m3s": 5.3659
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.2349,
+                    12.9889
+                ]
+            },
+            "properties": {
+                "node_id": "MH_VL_050",
+                "flood_depth_cm": 0.0,
+                "status": "SAFE",
+                "Q_in_m3s": 0.0,
+                "Q_capacity_m3s": 0.0
+            }
+        }
+    ]
+}
